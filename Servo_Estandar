@@ -54,17 +54,17 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
         if (giro == 1) {
             value = round(9 * (1.05) + value);
             pwmWrite(PWM_PIN, value);
-            printf("Valor actual: %d\n", value);
+            printf("Giro a la derecha");
             delay(150);
         } else if (giro == 2) {
             value = round(9 * (-1.05) + value);
             pwmWrite(PWM_PIN, value);
-            printf("Valor actual: %d\n", value);
+            printf("Giro a la izquierda");
             delay(150);
         } else {
             // No se presionaron los interruptores, mantener el valor actual
             pwmWrite(PWM_PIN, value);
-            printf("Valor actual: %d\n", value);
+            printf("Va recto");
         }
 }
 
