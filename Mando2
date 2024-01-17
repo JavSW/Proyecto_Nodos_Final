@@ -46,7 +46,6 @@ float acelerometro_offset_Y_final;
 float acelerometro_offset_Z_final;
 int contador = 0;
 int d = 0;
-float alpha=0.2;
 short int acelerometro_X_filt;
 short int acelerometro_Z_filt;
 short int acelerometro_Y_filt;
