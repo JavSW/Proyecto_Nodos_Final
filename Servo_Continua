@@ -76,14 +76,13 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
 	int rango=2400;
 	int divisor=160;
 	double roll=atof((char *)msg -> payload);
-	double value=roll+180;
+	double value=roll+184;
 		//Calculamos la distancia
 
 	int lectura=analogRead(pinBase);
 	int mV = (lectura * referenceMv) / 1023;
 	cm = interpolacion(mV);
-	printf("mV=%d\n", mV);
-	printf("distancia=%d\n\n", cm);
+	printf("El objeto más cercano está a una distancia=%d\n\n", cm);
 
     
 	if(cm < 70){
